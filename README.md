@@ -30,14 +30,29 @@ All five steps live in [`rag.py`](rag.py), one function per step.
 
 ## Setup
 
-Requires [uv](https://docs.astral.sh/uv/).
+Requires [Git](https://git-scm.com/) and [uv](https://docs.astral.sh/uv/).
+
+**1. Clone the repo**
+
+```bash
+git clone https://github.com/arunak1998/Rag_V1.git
+cd Rag_V1
+```
+
+**2. Install dependencies** (uv creates the `.venv` for you)
 
 ```bash
 uv sync
-cp .env.example .env    # then add your API key
 ```
 
-The models are called through an OpenAI-compatible gateway, configured in `.env`.
+**3. Add your API key**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace `your-api-key-here` with your key. The models are called
+through an OpenAI-compatible gateway, configured in `.env`.
 
 ## Run
 
